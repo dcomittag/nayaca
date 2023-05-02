@@ -1,23 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navigation Bar Example</title>
+    <!-- Add Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Add styles for navigation bar */
         .nav {
-            background-color: #333;
             overflow: hidden;
         }
         
         .nav a {
             float: left;
             display: block;
-            color: #f2f2f2;
+            color: #333;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            font-weight: normal;
         }
         
         .nav a:hover {
@@ -26,20 +29,18 @@
         }
         
         .active {
-            background-color: #4CAF50;
-            color: white;
+            font-weight: bold;
         }
 
         /* Add media query to collapse navigation bar on small devices */
         @media screen and (max-width: 600px) {
-            .nav a {
-                float: none;
-                display: block;
-                text-align: left;
+            .nav a:not(:first-child) {
+                display: none;
             }
             
-            .nav {
-                overflow: hidden;
+            .nav a.icon {
+                float: right;
+                display: block;
             }
         }
     </style>
@@ -50,11 +51,23 @@
         <a class="active" href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
+        <a href="#" class="icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
     </div>
     
     <!-- Add your content here -->
     <h1>Nayaca. Good life.</h1>
     <p>Thank you for using ¥€$, the expense tracker that is as unique as you. At ¥€$, we take your privacy seriously. Our expense tracker app does not collect any sensitive user information, and all data is stored locally on your device. We do not share or sell any user data to third parties. We may collect non-personally identifiable information such as usage statistics, crash reports, and device information in order to improve the app and provide a better user experience. This information is collected anonymously and is used for internal purposes only. We do not use any encryption or specific Apple security features to protect user data since no sensitive information is collected or stored within the app. However, we work closely with Apple to ensure that our app complies with all relevant guidelines and standards for iOS app development. If you have any questions or concerns about our data privacy practices, please don't hesitate to contact us at hello@nayaca.com.</p>
-    
+
+    <!-- Add JavaScript to toggle mobile menu -->
+    <script>
+        function toggleMenu() {
+            var x = document.getElementsByClassName("nav")[0];
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
+        }
+    </script>
 </body>
 </html>
