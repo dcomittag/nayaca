@@ -32,43 +32,38 @@
 
         /* Add media query to collapse navigation bar on small devices */
         @media screen and (max-width: 600px) {
-            .nav a {
-                float: none;
-                display: block;
-                text-align: left;
-                font-weight: normal;
-            }
-            
-            .nav {
-                overflow: hidden;
-            }
+  /* hide the navigation bar by default */
+  .nav {
+    display: none;
+  }
+  
+  /* show the burger icon */
+  .icon {
+    display: block;
+  }
+  
+  /* style the burger icon */
+  .icon:hover {
+    background-color: #ddd;
+  }
+  
+  /* show the navigation bar when the burger icon is clicked */
+  .icon:active + .nav {
+    display: block;
+  }
+  
+  /* stack the navigation elements on top of each other */
+  .nav a {
+    display: block;
+    text-align: left;
+  }
+  
+  /* style the active navigation element */
+  .nav a.active {
+    font-weight: bold;
+  }
+}
 
-            .burger {
-                display: block;
-            }
-
-            .nav.responsive {
-                position: relative;
-            }
-
-            .nav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-                font-weight: normal;
-            }
-
-            .nav.responsive a.active {
-                font-weight: bold;
-            }
-
-            .nav.responsive .burger {
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-        }
 
         @media screen and (min-width: 601px) {
             .burger {
