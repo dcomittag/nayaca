@@ -1,100 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navigation Bar Example</title>
+    <title>Navigation Bar Example</title>
     <style>
-        /* Add styles for navigation bar */
+      /* add styles for navigation bar */
+      .nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        overflow: hidden;
+      }
+      .nav li {
+        float: left;
+      }
+      .nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-weight: normal;
+      }
+      .nav li a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .nav .active {
+        font-weight: bold;
+        background-color: #4CAF50;
+      }
+
+      /* add media query to collapse navigation bar on small devices */
+      @media screen and (max-width: 600px) {
         .nav {
-            background-color: transparent;
-            overflow: hidden;
+          display: none;
         }
-        
-        .nav a {
-            float: left;
-            display: block;
-            color: black;
-            text-align: left;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-weight: normal;
+        .icon {
+          display: block;
+          color: white;
+          float: right;
+          padding: 14px 16px;
+          cursor: pointer;
         }
-        
-        .nav a:hover {
-            background-color: #ddd;
-            color: black;
+        .icon:hover {
+          background-color: #ddd;
+          color: black;
         }
-        
-        .active {
-            font-weight: bold;
+        .nav.collapsed {
+          display: block;
+          clear: both;
         }
-
-        /* Add media query to collapse navigation bar on small devices */
-        @media screen and (max-width: 600px) {
-  /* hide the navigation bar by default */
-  .nav {
-    display: none;
-  }
-  
-  /* show the burger icon */
-  .icon {
-    display: block;
-  }
-  
-  /* style the burger icon */
-  .icon:hover {
-    background-color: #ddd;
-  }
-  
-  /* show the navigation bar when the burger icon is clicked */
-  .icon:active + .nav {
-    display: block;
-  }
-  
-  /* stack the navigation elements on top of each other */
-  .nav a {
-    display: block;
-    text-align: left;
-  }
-  
-  /* style the active navigation element */
-  .nav a.active {
-    font-weight: bold;
-  }
-}
-
-
-        @media screen and (min-width: 601px) {
-            .burger {
-                display: none;
-            }
+        .nav.collapsed li {
+          float: none;
         }
+        .nav.collapsed li a {
+          text-align: left;
+        }
+      }
     </style>
-</head>
-<body>
-    <!-- Navigation bar -->
-    <div class="nav">
-        <a class="active" href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#" class="burger" onclick="toggleNav()">&#9776;</a>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <ul class="nav">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <!-- burger icon -->
+    <div class="icon" onclick="toggleNav()">
+      &#9776;
     </div>
-    
-    <!-- Add your content here -->
-    <h1>Nayaca. Good life.</h1>
-    <p>Content</p>
-
+    <!-- script to toggle navigation bar -->
     <script>
-        function toggleNav() {
-            var nav = document.getElementsByClassName("nav")[0];
-            if (nav.className === "nav") {
-                nav.className += " responsive";
-            } else {
-                nav.className = "nav";
-            }
-        }
+      function toggleNav() {
+        var nav = document.querySelector('.nav');
+        nav.classList.toggle('collapsed');
+      }
     </script>
-</body>
+  </body>
 </html>
-
