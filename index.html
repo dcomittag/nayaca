@@ -135,5 +135,19 @@ body {
     <h1>Welcome to Nayaca.</h1>
     <h2>Discover our apps for a good life.</h2>
   </div>
+
+  <script>
+    // Get the burger icon and the navigation menu
+    const burger = document.querySelector('.burger');
+    const navMenu = document.querySelector('nav ul');
+  
+    // Add a click event listener to the burger icon
+    burger.addEventListener('click', function() {
+      // Toggle the 'active' class on both the burger icon and the navigation menu
+      burger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+  
 </body>
 </html>
