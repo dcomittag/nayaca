@@ -16,7 +16,7 @@
         
         .nav a {
             display: block;
-            color: #f2f2f2;
+            color: #000;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -58,6 +58,24 @@
             display: none;
             cursor: pointer;
         }
+        
+        /* Add styles for big devices */
+        @media screen and (min-width: 601px) {
+            .nav a {
+                display: block;
+                color: #000;
+                font-weight: normal;
+            }
+            
+            .nav a:hover {
+                background-color: none;
+                color: #000;
+            }
+            
+            .active {
+                font-weight: bold;
+            }
+        }
     </style>
 </head>
 <body>
@@ -82,5 +100,6 @@
     </script>
 </body>
 </html>
+
 
 
