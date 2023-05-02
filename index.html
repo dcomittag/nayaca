@@ -7,17 +7,16 @@
     <style>
         /* Add styles for navigation bar */
         .nav {
-            background-color: none;
+            background-color: transparent;
             overflow: hidden;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-start;
         }
         
         .nav a {
             display: block;
-            color: #000;
-            text-align: center;
+            color: black;
+            text-align: left;
             padding: 14px 16px;
             text-decoration: none;
             font-weight: normal;
@@ -36,45 +35,25 @@
         @media screen and (max-width: 600px) {
             .nav a {
                 display: none;
+                text-align: center;
             }
-            
-            .burger {
+            .nav a:first-child {
                 display: block;
             }
-            
-            .nav.responsive {
-                flex-direction: column;
-                display: flex;
-            }
-            
             .nav.responsive a {
                 display: block;
-                text-align: left;
             }
-        }
-        
-        /* Add styles for burger icon */
-        .burger {
-            display: none;
-            cursor: pointer;
-        }
-        
-        /* Add styles for big devices */
-        @media screen and (min-width: 601px) {
-            .nav a {
+            .nav.responsive .icon {
                 display: block;
-                color: #000;
-                font-weight: normal;
             }
-            
-            .nav a:hover {
-                background-color: none;
-                color: #000;
-            }
-            
-            .active {
-                font-weight: bold;
-            }
+        }
+        .nav.responsive {
+            position: relative;
+        }
+        .nav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     </style>
 </head>
@@ -84,22 +63,22 @@
         <a class="active" href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a class="burger" onclick="toggleNav()">&#9776;</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     
     <!-- Add your content here -->
     <h1>Nayaca. Good life.</h1>
     <p>Content</p>
-
+    
     <script>
-        // Toggle responsive navigation bar
-        function toggleNav() {
-            var nav = document.querySelector(".nav");
-            nav.classList.toggle("responsive");
+        function myFunction() {
+            var x = document.getElementsByClassName("nav")[0];
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
         }
     </script>
 </body>
 </html>
-
-
-
