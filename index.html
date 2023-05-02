@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar Example</title>
+    <title>Responsive Navigation Bar Example</title>
     <style>
         /* Add styles for navigation bar */
         .nav {
-            background-color: #333;
+            background-color: none;
             overflow: hidden;
-            display: flex;
-            justify-content: flex-start;
         }
         
         .nav a {
+            float: left;
             display: block;
-            color: #fff;
-            text-align: center;
+            color: #000;
+            text-align: left;
             padding: 14px 16px;
             text-decoration: none;
             font-weight: normal;
@@ -30,24 +29,37 @@
         .active {
             font-weight: bold;
         }
-        
+
         /* Add media query to collapse navigation bar on small devices */
         @media screen and (max-width: 600px) {
             .nav a {
-                display: none;
+                float: none;
+                display: block;
+                text-align: left;
+                font-weight: normal;
             }
             
+            .nav {
+                overflow: hidden;
+                display: none;
+            }
+
+            .nav .icon {
+                display: block;
+            }
+
             .nav.responsive {
                 position: relative;
             }
-            
+
             .nav.responsive .icon {
                 position: absolute;
                 right: 0;
                 top: 0;
             }
-            
+
             .nav.responsive a {
+                float: none;
                 display: block;
                 text-align: left;
             }
@@ -60,24 +72,26 @@
         <a class="active" href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <!-- Burger icon -->
+    <div class="nav icon" onclick="toggleNav()">
+        <a href="javascript:void(0);">&#9776;</a>
     </div>
     
     <!-- Add your content here -->
     <h1>Nayaca. Good life.</h1>
     <p>Content</p>
-    
+
     <script>
-        /* Add script to toggle responsive class */
-        function myFunction() {
-            var x = document.querySelector(".nav");
-            if (x.className === "nav") {
-                x.className += " responsive";
+        function toggleNav() {
+            var nav = document.querySelector('.nav');
+            if (nav.className === 'nav') {
+                nav.className += ' responsive';
             } else {
-                x.className = "nav";
+                nav.className = 'nav';
             }
         }
     </script>
 </body>
 </html>
-
