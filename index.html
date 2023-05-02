@@ -9,11 +9,10 @@
         .nav {
             background-color: transparent;
             overflow: hidden;
-            display: flex;
-            justify-content: flex-start;
         }
         
         .nav a {
+            float: left;
             display: block;
             color: black;
             text-align: left;
@@ -34,26 +33,47 @@
         /* Add media query to collapse navigation bar on small devices */
         @media screen and (max-width: 600px) {
             .nav a {
-                display: none;
-                text-align: center;
+                float: none;
+                display: block;
+                text-align: left;
+                font-weight: normal;
             }
-            .nav a:first-child {
+            
+            .nav {
+                overflow: hidden;
+            }
+
+            .burger {
                 display: block;
             }
+
+            .nav.responsive {
+                position: relative;
+            }
+
             .nav.responsive a {
+                float: none;
                 display: block;
+                text-align: left;
+                font-weight: normal;
             }
-            .nav.responsive .icon {
+
+            .nav.responsive a.active {
+                font-weight: bold;
+            }
+
+            .nav.responsive .burger {
                 display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
             }
         }
-        .nav.responsive {
-            position: relative;
-        }
-        .nav.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
+
+        @media screen and (min-width: 601px) {
+            .burger {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -63,22 +83,23 @@
         <a class="active" href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="#" class="burger" onclick="toggleNav()">&#9776;</a>
     </div>
     
     <!-- Add your content here -->
     <h1>Nayaca. Good life.</h1>
     <p>Content</p>
-    
+
     <script>
-        function myFunction() {
-            var x = document.getElementsByClassName("nav")[0];
-            if (x.className === "nav") {
-                x.className += " responsive";
+        function toggleNav() {
+            var nav = document.getElementsByClassName("nav")[0];
+            if (nav.className === "nav") {
+                nav.className += " responsive";
             } else {
-                x.className = "nav";
+                nav.className = "nav";
             }
         }
     </script>
 </body>
 </html>
+
