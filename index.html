@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navigation Bar Example</title>
-    <!-- Add Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Add styles for navigation bar */
         .nav {
-            background-color: #333;
+            background-color: none;
             overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .nav a {
-            float: left;
             display: block;
             color: #f2f2f2;
             text-align: center;
@@ -34,29 +34,29 @@
 
         /* Add media query to collapse navigation bar on small devices */
         @media screen and (max-width: 600px) {
-            .nav {
-                overflow: hidden;
-                background-color: #333;
-            }
-            .nav a:not(:first-child) {
+            .nav a {
                 display: none;
             }
             
-            .nav a.icon {
+            .burger {
                 display: block;
-            }
-
-            .nav.responsive a.icon {
-                position: absolute;
-                right: 0;
-                top: 0;
             }
             
-            .nav.responsive a:not(:first-child) {
-                display: block;
-                position: relative;
-                width: 100%;
+            .nav.responsive {
+                flex-direction: column;
+                display: flex;
             }
+            
+            .nav.responsive a {
+                display: block;
+                text-align: left;
+            }
+        }
+        
+        /* Add styles for burger icon */
+        .burger {
+            display: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -66,24 +66,21 @@
         <a class="active" href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="#" class="icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+        <a class="burger" onclick="toggleNav()">&#9776;</a>
     </div>
     
     <!-- Add your content here -->
     <h1>Nayaca. Good life.</h1>
     <p>Content</p>
 
-    <!-- Add JavaScript to toggle mobile menu -->
     <script>
-        function toggleMenu() {
-            var x = document.getElementsByClassName("nav")[0];
-            if (x.className === "nav") {
-                x.className += " responsive";
-            } else {
-                x.className = "nav";
-            }
+        // Toggle responsive navigation bar
+        function toggleNav() {
+            var nav = document.querySelector(".nav");
+            nav.classList.toggle("responsive");
         }
     </script>
 </body>
 </html>
+
 
