@@ -80,6 +80,25 @@
   text-decoration: underline;
 }
 
+.custom-toggler span {
+  display: block;
+  height: 2px;
+  width: 25px;
+  margin-bottom: 3px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.custom-toggler span:nth-child(2) {
+  width: 20px;
+}
+
+.custom-toggler span:last-child {
+  margin-bottom: 0;
+}
+
+
     </style>
   </head>
   <body>
@@ -89,8 +108,13 @@
           <img src="assets/NAYAYA_white_transparent.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon custom-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
