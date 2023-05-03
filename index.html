@@ -56,19 +56,20 @@
         top: 0.75rem;
       }
 
-      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(1) {
-        transform: rotate(45deg) translate(2px, 2px);
-        top: 0.75rem;
-      }
+      .navbar-toggler:not(.collapsed) .navbar-toggler-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 2px);
+    top: 0.75rem;
+  }
 
-      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
-        opacity: 0;
-      }
+  .navbar-toggler:not(.collapsed) .navbar-toggler-icon span:nth-child(2) {
+    opacity: 0;
+  }
 
-      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
-        transform: rotate(-45deg) translate(2px, -2px);
-        top: 0.75rem;
-      }
+  .navbar-toggler:not(.collapsed) .navbar-toggler-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(2px, -2px);
+    top: 0.75rem;
+  }
+
 
       .navbar-nav a {
         color: white;
@@ -123,7 +124,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
     <script>
       $(document).ready(function(){
         $(".navbar-toggler").click(function(){
