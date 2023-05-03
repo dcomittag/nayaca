@@ -38,7 +38,7 @@
         cursor: pointer;
       }
 
-      .navbar-toggler-icon div {
+      .navbar-toggler-icon span {
         position: absolute;
         height: 0.25rem;
         width: 100%;
@@ -47,41 +47,27 @@
         transition: all 0.3s ease-in-out;
       }
 
-      .navbar-toggler-icon div:nth-child(1) {
+      .navbar-toggler-icon span:nth-child(1) {
         top: 0px;
       }
 
-      .navbar-toggler-icon div:nth-child(2),
-      .navbar-toggler-icon div:nth-child(3) {
+      .navbar-toggler-icon span:nth-child(2),
+      .navbar-toggler-icon span:nth-child(3) {
         top: 0.75rem;
       }
 
-      .navbar-toggler:not(.collapsed) .navbar-toggler-icon div:nth-child(1) {
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(1) {
         transform: rotate(45deg) translate(2px, 2px);
         top: 0.75rem;
       }
 
-      .navbar-toggler:not(.collapsed) .navbar-toggler-icon div:nth-child(2) {
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
         opacity: 0;
       }
 
-      .navbar-toggler:not(.collapsed) .navbar-toggler-icon div:nth-child(3) {
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
         transform: rotate(-45deg) translate(2px, -2px);
         top: 0.75rem;
-      }
-
-      .navbar-toggler.collapsed .navbar-toggler-icon div:nth-child(1) {
-        transform: none;
-        top: 0px;
-      }
-
-      .navbar-toggler.collapsed .navbar-toggler-icon div:nth-child(2) {
-        opacity: 1;
-      }
-
-      .navbar-toggler.collapsed .navbar-toggler-icon div:nth-child(3) {
-        transform: none;
-        top: 1.5rem;
       }
 
       .navbar-nav a {
