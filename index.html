@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Foundation Navbar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css" integrity="sha512-rJy9i9wwc/19ACiEM7wtvNtKxWzVJ25NkLNg7i09j2A+ps7Xu5QnF5D5vZztzrTy8r3i+E55A3YpeH5dOh96Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <nav class="top-bar" data-topbar role="navigation">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text">My Website</li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+<head>
+	<title>My Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css" integrity="sha512-tJj8oy+SN1sCzkJebsTbnTzCZ1a2XbVTxOOfkEhKjgS19FtNq3tG1wZK0xB4lr4p9X+hNc/ZZAeg+jMCn+g8kw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<header>
+		<nav class="top-bar">
+			<div class="top-bar-title">
+				<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+					<button class="menu-icon" type="button" data-toggle></button>
+				</span>
+				<strong>My Website</strong>
+			</div>
+			<div id="responsive-menu">
+				<div class="top-bar-left">
+					<ul class="dropdown menu" data-dropdown-menu>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Login</a></li>
         </ul>
