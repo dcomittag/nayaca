@@ -46,28 +46,29 @@
         border-radius: 1rem;
         transition: all 0.3s ease-in-out;
       }
+      
       .navbar-toggler:not(.collapsed) .navbar-toggler-icon span:nth-child(1) {
-  transform: rotate(45deg) translate(2px, 2px);
+  transform: rotate(45deg) translate(2px, 2px) !important;
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon span:nth-child(2) {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon span:nth-child(3) {
-  transform: rotate(-45deg) translate(2px, -2px);
+  transform: rotate(-45deg) translate(2px, -2px) !important;
 }
 
 .navbar-toggler.collapsed .navbar-toggler-icon span:nth-child(1) {
-  transform: rotate(0);
+  transform: rotate(0) !important;
 }
 
 .navbar-toggler.collapsed .navbar-toggler-icon span:nth-child(2) {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .navbar-toggler.collapsed .navbar-toggler-icon span:nth-child(3) {
-  transform: rotate(0);
+  transform: rotate(0) !important;
 }
 
 
