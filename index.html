@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Foundation Navigation Bar Example</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/vendor/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/vendor/what-input.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
-</head>
-<body>
-  <nav class="top-bar" data-topbar role="navigation">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text">Logo</li>
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-      </ul>
-    </div>
-    <button class="menu-icon" type="button" data-toggle></button>
-    <div class="top-bar-right">
-      <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-      </ul>
-    </div>
-  </nav>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Foundation Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css" integrity="sha512-rJy9i9wwc/19ACiEM7wtvNtKxWzVJ25NkLNg7i09j2A+ps7Xu5QnF5D5vZztzrTy8r3i+E55A3YpeH5dOh96Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav class="top-bar" data-topbar role="navigation">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">My Website</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+      <button class="menu-icon" type="button" data-toggle></button>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-4JL5eW8KuOIP5l+6zjr61GamMnN9xen+GsJjKipgoGNA1Bb07r2Fn0YviqrpeZcJ+PmOvXeNzOy+38aT0ZR8lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" integrity="sha512-HvJPXQnMLcbLVuz+G4qlS8fK5OU/DLZnmyDLZ+L4xigDdfv0j0oL7owL/QLFp5/VjST5Pz/zZ16MDoZ1WjVHQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>
+
 
