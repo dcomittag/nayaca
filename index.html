@@ -1,39 +1,125 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>My Website</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css" integrity="sha512-tJj8oy+SN1sCzkJebsTbnTzCZ1a2XbVTxOOfkEhKjgS19FtNq3tG1wZK0xB4lr4p9X+hNc/ZZAeg+jMCn+g8kw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-	<header>
-		<nav class="top-bar">
-			<div class="top-bar-title">
-				<span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-					<button class="menu-icon" type="button" data-toggle></button>
-				</span>
-				<strong>My Website</strong>
-			</div>
-			<div id="responsive-menu">
-				<div class="top-bar-left">
-					<ul class="dropdown menu" data-dropdown-menu>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </div>
-      <button class="menu-icon" type="button" data-toggle></button>
-    </nav>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+      body {
+  background-image: url("assets/jungle.png");
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-color: #009473;
+  height: 100vh;
+  color: white;
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-4JL5eW8KuOIP5l+6zjr61GamMnN9xen+GsJjKipgoGNA1Bb07r2Fn0YviqrpeZcJ+PmOvXeNzOy+38aT0ZR8lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" integrity="sha512-HvJPXQnMLcbLVuz+G4qlS8fK5OU/DLZnmyDLZ+L4xigDdfv0j0oL7owL/QLFp5/VjST5Pz/zZ16MDoZ1WjVHQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-brand img {
+  height: 66px;
+  width: auto;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  cursor: pointer;
+  background-image: url("assets/NAYAYA_black_white.png");
+}
+
+.navbar-toggler-icon span {
+  position: absolute;
+  height: 0.25rem;
+  width: 100%;
+  background-color: white !important;
+  border-radius: 1rem;
+}
+
+.navbar-light .navbar-toggler-icon span {
+  background-color: #fff !important;
+}
+
+.navbar-toggler-icon span,
+.navbar-toggler-icon:hover span,
+.navbar-toggler-icon:focus span {
+  background-color: #fff !important;
+}
+
+
+.navbar-nav a {
+  color: white;
+  font-weight: normal;
+}
+
+.navbar-nav a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .active > a {
+  color: white;
+  text-decoration: underline;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/NAYAYA_white_transparent.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">¥€$</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Agency</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Legal</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Welcome to Nayaca</h1>
+      <p>Discover our apps for a good life.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script>
-      $(document).foundation();
+      $(document).ready(function(){
+        $(".navbar-toggler").click(function(){
+          $(this).toggleClass("collapsed");
+        });
+      });
     </script>
   </body>
 </html>
-
-
