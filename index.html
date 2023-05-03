@@ -29,55 +29,6 @@
       .navbar-toggler:focus {
         outline: none;
       }
-      
-      .navbar-toggler-icon {
-  position: relative !important;
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-  margin: 0 !important;
-  transition: all 0.3s ease-in-out !important;
-  cursor: pointer !important;
-}
-
-.navbar-toggler-icon {
-  position: absolute !important;
-  height: 0.25rem !important;
-  width: 100% !important;
-  background-color: #fff !important;
-  border-radius: 1rem !important;
-  transition: all 0.3s ease-in-out !important;
-}
-
-
-
-
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(1) {
-  transform: rotate(45deg) translate(2px, 2px);
-}
-
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(3) {
-  transform: rotate(-45deg) translate(2px, -2px);
-}
-
-.navbar-toggler.collapsed .navbar-toggler-icon:nth-child(1) {
-  transform: rotate(0);
-}
-
-.navbar-toggler.collapsed .navbar-toggler-icon:nth-child(2) {
-  opacity: 1;
-}
-
-.navbar-toggler.collapsed .navbar-toggler-icon:nth-child(3) {
-  transform: rotate(0);
-}
-
-
-
-
       .navbar-nav a {
         color: white;
         font-weight: normal;
@@ -99,8 +50,7 @@
           <img src="assets/NAYAYA_white_transparent.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">
-          </span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
@@ -125,9 +75,8 @@
       <p>Discover our apps for a good life.</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function(){
         $(".navbar-toggler").click(function(){
@@ -136,4 +85,4 @@
       });
     </script>
   </body>
-  
+</html>
