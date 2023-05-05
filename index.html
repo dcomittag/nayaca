@@ -51,10 +51,11 @@
     animation: none; /* remove the fadeOut animation */
     display: block !important; /* make sure the container is visible by default */
   }
-  .navbar-collapse.show + .container {
-    animation: fadeOut 0.3s forwards; /* apply the fadeOut animation only when the toggler is pressed */
-    display: none !important; /* make the container invisible when the toggler is pressed */
-  }
+  .navbar-collapse.show ~ .container {
+    animation: fadeOut 0.3s forwards;
+    display: none !important;
+}
+
 }
 
 
