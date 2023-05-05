@@ -1,4 +1,58 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Navigation Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      .navbar {
+        background-color: transparent !important;
+      }
+      .navbar-brand {
+        margin: 0;
+        padding: 0;
+      }
+      .navbar-brand img {
+        height: 50px;
+      }
+      body {
+        background-image: url('assets/jungle.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" href="#">
+        <img src="assets/NAYAYA_white_transparent.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +70,104 @@
             height: 100vh;
             color: white;
         }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand img {
+            height: 66px;
+            width: auto;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: transparent;
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+        }
+
+        .navbar-toggler-icon {
+            display: none;
+        }
+
+        .navbar-nav a {
+            color: white;
+            font-weight: normal;
+        }
+
+        .navbar-nav a:hover {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar-nav .active > a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .custom-toggler span {
+            display: block;
+            height: 2px;
+            width: 25px;
+            margin-bottom: 3px;
+            position: relative;
+            background: #fff;
+            border-radius: 3px;
+        }
+
+        .custom-toggler span:nth-child(2) {
+            width: 20px;
+        }
+
+        .custom-toggler span:last-child {
+            margin-bottom: 0;
+        }
+        .navbar-dark .navbar-toggler.custom-toggler {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.navbar-dark .navbar-toggler.custom-toggler span {
+  position: absolute;
+  height: 0.25rem;
+  width: 100%;
+  background-color: white !important;
+  border-radius: 1rem;
+}
+
+.navbar-light .navbar-toggler.custom-toggler span {
+  background-color: #fff !important;
+}
+
+.navbar-dark .navbar-toggler.custom-toggler span,
+.navbar-dark .navbar-toggler.custom-toggler:hover span,
+.navbar-dark .navbar-toggler.custom-toggler:focus span {
+  background-image: none;
+}
+
+.custom-toggler span {
+  display: block;
+  height: 2px;
+  width: 25px;
+  margin-bottom: 3px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.custom-toggler span:nth-child(2) {
+  width: 20px;
+}
+
+.custom-toggler span:last-child {
+  margin-bottom: 0;
+}
 
     </style>
 </head>
@@ -62,4 +214,4 @@
       });
     </script>
   </body>
-</html>
+</html> -->
