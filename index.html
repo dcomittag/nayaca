@@ -25,13 +25,11 @@
         outline: none;
       }
       body {
-  background-image: url('assets/jungle.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: calc(100vh - constant(safe-area-inset-top));
-  padding-top: constant(safe-area-inset-top);
-}
-
+        background-image: url('assets/jungle.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+      }
       h1, p {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
@@ -95,7 +93,7 @@
     <div class="container" id="myContainer">
       <div class="row justify-content-center">
         <div class="col-sm-12">
-          <p>Welcome to Gayaca.</p>
+          <p>Welcome to Sayaca.</p>
           <p>Discover our apps for a good life.</p>
         </div>
       </div>
