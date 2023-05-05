@@ -40,7 +40,7 @@
       }
 
       /* Media query for smaller devices */
-      @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   body {
     background-position-x: 36%;
   }
@@ -51,12 +51,12 @@
     animation: none; /* remove the fadeOut animation */
     display: block !important; /* make sure the container is visible by default */
   }
-  .navbar-collapse.show ~ .container {
-    animation: fadeOut 0.3s forwards;
-    display: none !important;
+  .navbar-collapse.show + .container {
+    animation: fadeOut 0.3s forwards; /* apply the fadeOut animation only when the toggler is pressed */
+    display: none !important; /* make the container invisible when the toggler is pressed */
+  }
 }
 
-}
 
 
       /* Keyframes for animation */
