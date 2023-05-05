@@ -48,10 +48,10 @@
           margin-left: auto;
         }
         #myContainer {
-          display: none;
-        }
-        #myContainer.show {
           display: block;
+        }
+        #myContainer.noshow {
+          display: none;
         }
       }
 
@@ -59,10 +59,10 @@
     <script>
       $(document).ready(function() {
         $('#navbarNav').on('shown.bs.collapse', function () {
-          $('#myContainer').removeClass('show');
+          $('#myContainer').addClass('noshow');
         });
         $('#navbarNav').on('hidden.bs.collapse', function () {
-          $('#myContainer').addClass('show');
+          $('#myContainer').removeClass('noshow');
         });
       });
     </script>
