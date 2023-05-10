@@ -76,10 +76,11 @@
 
   // Handle navbar close event
   $('#navbarNav').on('hidden.bs.collapse', function () {
-    if (!isNavbarOpen) { // Only remove 'noshow' class if the navbar state was not changed
+    isNavbarOpen = false; // Set the navbar state to closed
+    // Check scroll position
+    if ($(window).scrollTop() === 0) {
       $('#myContainer').removeClass('noshow');
     }
-    isNavbarOpen = false; // Set the navbar state to closed
   });
 
   // Detect scroll event
