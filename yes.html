@@ -24,6 +24,13 @@
         box-shadow: none;
         outline: none;
       }
+      .navbar {
+        transition: all 0.3s;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        height: auto;
+      }
       body {
         /* background-image: url('assets/jungle.png');
         background-repeat: no-repeat;
@@ -51,6 +58,25 @@
       }
 
     </style>
+     <script>
+      $(document).ready(function() {
+        // Detect scroll event
+        $(window).scroll(function() {
+          // Check scroll position
+          if ($(this).scrollTop() > 0) {
+            // Add the "navbar-scroll" class to the navigation bar
+            $('.navbar').addClass('navbar-scroll');
+            // Change the logo image size
+            $('.navbar-brand img').css('height', '33px');
+          } else {
+            // Remove the "navbar-scroll" class from the navigation bar
+            $('.navbar').removeClass('navbar-scroll');
+            // Restore the original logo image size
+            $('.navbar-brand img').css('height', '66px');
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark">
