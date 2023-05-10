@@ -84,11 +84,13 @@
             $('.navbar').addClass('navbar-scroll');
             // Change the logo image size
             $('.navbar-brand img').css('height', '33px');
+            $('#myContainer').addClass('noshow');
           } else {
             // Remove the "navbar-scroll" class from the navigation bar
             $('.navbar').removeClass('navbar-scroll');
             // Restore the original logo image size
             $('.navbar-brand img').css('height', '66px');
+            $('#myContainer').removeClass('noshow');
           }
         });
       });
