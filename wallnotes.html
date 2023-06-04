@@ -11,7 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
       .navbar {
-        background-color: transparent !important;
+        background-color: #FCE365  !important;
       }
       .navbar-brand {
         margin: 0;
@@ -32,16 +32,16 @@
         height: auto;
       }
       body {
-        background-image: url('assets/jungle.png');
+        /* background-image: url('assets/jungle.png');
         background-repeat: no-repeat;
         background-size: cover;
-        height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        height: 100vh; */
       }
       h1, p {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
-        color: white;
-        text-align: center;
+        color: black;
+        /* text-align: center; */
       }
       .container {
         padding-top: 10%;
@@ -55,57 +55,27 @@
         .navbar-nav .nav-item {
           margin-left: auto;
         }
-        #myContainer {
-          display: block;
-        }
-        #myContainer.noshow {
-          display: none;
-        }
       }
 
     </style>
-    <script>
+     <script>
       $(document).ready(function() {
-  var isNavbarOpen = false; // Track the state of the navbar
-
-  // Handle navbar open event
-  $('#navbarNav').on('shown.bs.collapse', function () {
-    $('#myContainer').addClass('noshow');
-    isNavbarOpen = true; // Set the navbar state to open
-  });
-
-  // Handle navbar close event
-  $('#navbarNav').on('hidden.bs.collapse', function () {
-    isNavbarOpen = false; // Set the navbar state to closed
-    // Check scroll position
-    if ($(window).scrollTop() === 0) {
-      $('#myContainer').removeClass('noshow');
-    }
-  });
-
-  // Detect scroll event
-  $(window).scroll(function() {
-    // Check scroll position
-    if ($(this).scrollTop() > 0) {
-      // Add the "navbar-scroll" class to the navigation bar
-      $('.navbar').addClass('navbar-scroll');
-      // Change the logo image size
-      $('.navbar-brand img').css('height', '33px');
-      if (!isNavbarOpen) { // Only add 'noshow' class if the navbar is closed
-        $('#myContainer').addClass('noshow');
-      }
-    } else {
-      // Remove the "navbar-scroll" class from the navigation bar
-      $('.navbar').removeClass('navbar-scroll');
-      // Restore the original logo image size
-      $('.navbar-brand img').css('height', '66px');
-      if (!isNavbarOpen) { // Only remove 'noshow' class if the navbar is closed
-        $('#myContainer').removeClass('noshow');
-      }
-    }
-  });
-});
-
+        // Detect scroll event
+        $(window).scroll(function() {
+          // Check scroll position
+          if ($(this).scrollTop() > 0) {
+            // Add the "navbar-scroll" class to the navigation bar
+            $('.navbar').addClass('navbar-scroll');
+            // Change the logo image size
+            $('.navbar-brand img').css('height', '33px');
+          } else {
+            // Remove the "navbar-scroll" class from the navigation bar
+            $('.navbar').removeClass('navbar-scroll');
+            // Restore the original logo image size
+            $('.navbar-brand img').css('height', '66px');
+          }
+        });
+      });
     </script>
   </head>
   <body>
@@ -124,7 +94,7 @@
           <li class="nav-item">
             <a class="nav-link" href="yes.html">¥€$</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="wallnotes.html">Wallnotes</a>
           </li>
           <li class="nav-item">
@@ -136,14 +106,15 @@
         </ul>
       </div>
     </nav>
-    <div class="container" id="myContainer">
+    <div class="container">
       <div class="row justify-content-center">
         <div class="col-sm-12">
-          <p>Welcome to Nayaca.</p>
-          <p>Software for a good life.</p>
+          <p style="color: #FCE365 ">JACK</p>
+          <p>Are you JACK?</p>
+          <br><br>
+          <p>Coming soon...<br><br>
         </div>
       </div>
     </div>
   </body>
 </html>
-
