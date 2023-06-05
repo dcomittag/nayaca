@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NAYACA</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      .navbar {
+        background-color: transparent !important;
+      }
+      .navbar-brand {
+        margin: 0;
+        padding: 0;
+      }
+      .navbar-brand img {
+        height: 66px;
+      }
+      .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+      }
+      .navbar {
+        transition: all 0.3s;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        height: auto;
+      }
+      body {
+        background-image: url('assets/jungle180.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+      }
+      h1, p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+      }
+      .container {
+        padding-top: 10%;
+      }
+
+      /* Media query for smaller devices */
+      @media screen and (max-width: 768px) {
+        body {
+          background-position-x: 36%;
+        }
+        .navbar-nav .nav-item {
+          margin-left: auto;
+        }
+        #myContainer {
+          display: block;
+        }
+        #myContainer.noshow {
+          display: none;
+        }
+      }
+
+    </style>
+    <script>
+      $(document).ready(function() {
+  var isNavbarOpen = false; // Track the state of the navbar
+
+  // Handle navbar open event
+  $('#navbarNav').on('shown.bs.collapse', function () {
+    $('#myContainer').addClass('noshow');
+    isNavbarOpen = true; // Set the navbar state to open
+  });
+
+  // Handle navbar close event
+  $('#navbarNav').on('hidden.bs.collapse', function () {
+    isNavbarOpen = false; // Set the navbar state to closed
+    // Check scroll position
+    if ($(window).scrollTop() === 0) {
+      $('#myContainer').removeClass('noshow');
+    }
+  });
+
+  // Detect scroll event
+  $(window).scroll(function() {
+    // Check scroll position
+    if ($(this).scrollTop() > 0) {
+      // Add the "navbar-scroll" class to the navigation bar
+      $('.navbar').addClass('navbar-scroll');
+      // Change the logo image size
+      $('.navbar-brand img').css('height', '33px');
+      if (!isNavbarOpen) { // Only add 'noshow' class if the navbar is closed
+        $('#myContainer').addClass('noshow');
+      }
+    } else {
+      // Remove the "navbar-scroll" class from the navigation bar
+      $('.navbar').removeClass('navbar-scroll');
+      // Restore the original logo image size
+      $('.navbar-brand img').css('height', '66px');
+      if (!isNavbarOpen) { // Only remove 'noshow' class if the navbar is closed
+        $('#myContainer').removeClass('noshow');
+      }
+    }
+  });
+});
+
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" href="/">
+        <img src="assets/NAYACA_white_transparent.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="agency.html">Agency</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yes.html">¥€$</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wallnotes.html">Wallnotes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="jack.html">JACK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="legal.html">Legal</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" id="myContainer">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p>Uh-oh, something went wrong.</p>
+          <h1>ERROR 404.</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
