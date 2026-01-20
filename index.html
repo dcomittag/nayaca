@@ -12,14 +12,14 @@
     <style>
       .navbar {
         background-color: transparent !important;
+        padding-left: 0;
       }
       .navbar-brand {
-        padding: 0 !important;
-        margin: 0 !important;
+        margin: 0;
+        padding: 0;
       }
       .navbar-brand img {
         height: 42px;
-        display: block; /* removes inline-img baseline gap */
       }
       .navbar-toggler:focus {
         box-shadow: none;
@@ -31,14 +31,12 @@
         top: 0;
         z-index: 999;
         height: auto;
-        padding: 0 !important;
       }
       body {
         background-image: url('assets/jungle.png');
         background-repeat: no-repeat;
         background-size: cover;
         height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-        margin: 0;
       }
       h1, p {
         font-family: 'Lato', sans-serif;
@@ -49,9 +47,6 @@
       .container {
         padding-top: 10%;
       }
-
-      
-
 
       /* Media query for smaller devices */
       @media screen and (max-width: 768px) {
@@ -117,7 +112,7 @@
   <body>
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand" href="/">
-        <img src="assets/NAYACA_raw.png" alt="Logo">
+        <img src="assets/NAYACA_white_transparent.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
