@@ -9,81 +9,60 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <style>
+      body {
+        font-family: 'Lato', sans-serif;
+        color: black;
+      }
+
       .navbar {
-        background-color: #F3F2EE  !important;
-      }
-      .navbar-brand {
-        margin: 0;
-        padding: 0;
-      }
-      .navbar-brand img {
-        height: 66px;
-      }
-      .navbar-toggler:focus {
-        box-shadow: none;
-        outline: none;
-      }
-      .navbar {
+        background-color: #F3F2EE !important;
         transition: all 0.3s;
         position: sticky;
         top: 0;
         z-index: 999;
-        height: auto;
       }
-      body {
-        /* background-image: url('assets/jungle.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh; */
-      }
-      h1, p {
-        font-family: 'Lato', sans-serif;
-        font-weight: 700;
-        color: black;
-        /* text-align: center; */
-      }
-      .container {
-        padding-top: 10%;
-      }
-      .square {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Makes it a perfect square */
-    border-radius: 8px;   /* optional rounded corners */
-  }
 
-      /* Media query for smaller devices */
+      .navbar-brand img {
+        height: 66px;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+      }
+
+      .square {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* perfect square */
+        border-radius: 8px;
+      }
+
       @media screen and (max-width: 768px) {
-        body {
-          background-position-x: 36%;
-        }
         .navbar-nav .nav-item {
           margin-left: auto;
         }
       }
-
     </style>
-     <script>
+
+    <script>
       $(document).ready(function() {
-        // Detect scroll event
         $(window).scroll(function() {
-          // Check scroll position
           if ($(this).scrollTop() > 0) {
-            // Add the "navbar-scroll" class to the navigation bar
             $('.navbar').addClass('navbar-scroll');
-            // Change the logo image size
             $('.navbar-brand img').css('height', '33px');
           } else {
-            // Remove the "navbar-scroll" class from the navigation bar
             $('.navbar').removeClass('navbar-scroll');
-            // Restore the original logo image size
             $('.navbar-brand img').css('height', '66px');
           }
         });
       });
     </script>
   </head>
+
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand" href="/">
         <img src="assets/NAYACA_white_transparent.png" alt="Logo">
@@ -93,96 +72,61 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="agency.html">Agency</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="legal.html">Legal</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="agency.html">Agency</a></li>
+          <li class="nav-item active"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="legal.html">Legal</a></li>
         </ul>
       </div>
     </nav>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-sm-12">
-<p style="color: #85BB65 ">¥€$ Expense Tracker</p>
-          <p>Discover ¥€$, the expense tracker that is as unique as you are. With this free version, you can create up to five categories
-            with personalized names, budgets (optional), colors, and emojis. Tracking your expenses with ¥€$ is effortless. Simply enter
-            your current expenses with just a few taps and start saving money. To edit or delete a category, press and hold its emoji
-            button for two seconds. At the end of each month, you'll find an overview of your spending in the "Months" section.</p>
+
+    <!-- Container -->
+    <div class="container mt-5">
+      <!-- App descriptions -->
+      <div class="row">
+        <div class="col-12 mb-4">
+          <p style="color: #85BB65">¥€$ Expense Tracker</p>
+          <p>Discover ¥€$, the expense tracker that is as unique as you are. With this free version, you can create up to five categories with personalized names, budgets (optional), colors, and emojis. Tracking your expenses with ¥€$ is effortless. Simply enter your current expenses with just a few taps and start saving money.</p>
           <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank" style="text-decoration: none;">
             <img src="assets/YesLogo.png" alt="Yes Logo" style="width: 40px; height: 40px; border-radius: 8px;">
             <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
           </a>
-          <br><br>
         </div>
 
-        <div class="col-sm-12">
-          <p style="color: #85BB65 ">¥€$ Expense Tracker</p>
-          <p>Discover ¥€$, the expense tracker that is as unique as you are. With this free version, you can create up to five categories
-            with personalized names, budgets (optional), colors, and emojis. Tracking your expenses with ¥€$ is effortless. Simply enter
-            your current expenses with just a few taps and start saving money. To edit or delete a category, press and hold its emoji
-            button for two seconds. At the end of each month, you'll find an overview of your spending in the "Months" section.</p>
-          <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank" style="text-decoration: none;">
-            <img src="assets/YesLogo.png" alt="Yes Logo" style="width: 40px; height: 40px; border-radius: 8px;">
-            <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
-          </a>
-          <br><br>
+        <div class="col-12 mb-4">
           <p style="background-color: #0A84FF; display: inline-block; padding: 0 5px;">FlagSpot</p>
-          <p>Wallnote reimagines your iPhone's wallpaper as a canvas for your most important notes. Select any photo,
-            style it with custom text and background, then add your personal reminders. A quick screenshot transforms it
-            into your wallpaper, ensuring your notes are always just a glance away. Embrace Wallnote and make your reminders
-            personal, stylish, and impossible to miss.</p>
+          <p>Wallnote reimagines your iPhone's wallpaper as a canvas for your most important notes. Select any photo, style it with custom text and background, then add your personal reminders.</p>
           <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank" style="text-decoration: none;">
-              <img src="assets/WallnoteLogo.png" alt="Wallnote Logo" style="width: 40px; height: 40px; border-radius: 8px;">
+            <img src="assets/WallnoteLogo.png" alt="Wallnote Logo" style="width: 40px; height: 40px; border-radius: 8px;">
             <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
           </a>
-          <br><br>
-          <p style="background-color: #5856D6; display: inline-block; padding: 0 5px;">Wallnote</p>
-          <p>Wallnote reimagines your iPhone's wallpaper as a canvas for your most important notes. Select any photo,
-            style it with custom text and background, then add your personal reminders. A quick screenshot transforms it
-            into your wallpaper, ensuring your notes are always just a glance away. Embrace Wallnote and make your reminders
-            personal, stylish, and impossible to miss.</p>
-          <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank" style="text-decoration: none;">
-              <img src="assets/WallnoteLogo.png" alt="Wallnote Logo" style="width: 40px; height: 40px; border-radius: 8px;">
-            <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
-          </a>
-          <br><br>
-          <p style="color: #003399">CaminoQuest</p>
-          <p>
-            Walk the Camino de Santiago wherever you are.</p>
-            <a href="" target="_blank">
-              <img src="assets/CaminoQuestLogo.png" alt="CaminoQuest Logo" style="width: 40px; height: 40px; border-radius: 8px;">
-            </a>
-          <br><br>
-          <p>In the App Store in summer 2025.</p>
-          <br><br>
+        </div>
 
-          <p>If you enjoy using ¥€$, we would greatly appreciate it if you could take a moment to rate the app in the App Store. Your
-            feedback is invaluable as we continually strive to enhance the user experience. For any comments, questions, or suggestions,
-            please don't hesitate to email us at:<br><br>
-            <a href="mailto:hello@nayaca.com">hello@nayaca.com</a></p>
+        <div class="col-12 mb-4">
+          <p style="background-color: #5856D6; display: inline-block; padding: 0 5px;">Wallnote</p>
+          <p>Wallnote reimagines your iPhone's wallpaper as a canvas for your most important notes. Quick screenshot transforms it into your wallpaper, ensuring your notes are always just a glance away.</p>
+        </div>
+
+        <div class="col-12 mb-4">
+          <p style="color: #003399">CaminoQuest</p>
+          <p>Walk the Camino de Santiago wherever you are. In the App Store in summer 2025.</p>
         </div>
       </div>
-      <div class="col-12">
-  <div class="row g-3">
-    <div class="col-12 col-md-6 col-lg-3">
-      <div class="square bg-primary"></div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-3">
-      <div class="square bg-success"></div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-3">
-      <div class="square bg-warning"></div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-3">
-      <div class="square bg-danger"></div>
-    </div>
-  </div>
-</div>
+
+      <!-- Squares -->
+      <div class="row g-3 mt-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="square bg-primary"></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="square bg-success"></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="square bg-warning"></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="square bg-danger"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
