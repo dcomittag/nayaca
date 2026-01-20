@@ -39,7 +39,7 @@
       }
 
       .navbar-brand img {
-        height: 66px;
+        height: 42px;
       }
 
       .navbar-toggler:focus {
@@ -93,7 +93,7 @@
             $('.navbar-brand img').css('height', '33px');
           } else {
             $('.navbar').removeClass('navbar-scroll');
-            $('.navbar-brand img').css('height', '66px');
+            $('.navbar-brand img').css('height', '42px');
           }
         });
       });
@@ -104,7 +104,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand" href="/">
-        <img src="assets/NAYACA_black_transparent.png" alt="Logo">
+        <img src="assets/NAYACA_white_transparent.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -118,44 +118,17 @@
       </div>
     </nav>
 
-    <!-- Container -->
-    <div class="container mt-5">
-      <!-- App descriptions -->
-      <div class="row">
-        <div class="col-12 mb-4">
-          <p style="color: #85BB65">¥€$ Expense Tracker</p>
-          <p>Discover ¥€$, the expense tracker that is as unique as you are. With this free version, you can create up to five categories with personalized names, budgets (optional), colors, and emojis. Tracking your expenses with ¥€$ is effortless. Simply enter your current expenses with just a few taps and start saving money.</p>
-          <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank" style="text-decoration: none;">
-            <img src="assets/YesLogo.png" alt="Yes Logo" style="width: 40px; height: 40px; border-radius: 8px;">
-            <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
-          </a>
-        </div>
+    <!-- Main container -->
+<div class="container mt-5">
 
-        <div class="col-12 mb-4">
-          <p style="background-color: #0A84FF; display: inline-block; padding: 0 5px;">FlagSpot</p>
-          <p>Wallnote reimagines your iPhone's wallpaper as a canvas for your most important notes. Select any photo, style it with custom text and background, then add your personal reminders.</p>
-          <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank" style="text-decoration: none;">
-            <img src="assets/WallnoteLogo.png" alt="Wallnote Logo" style="width: 40px; height: 40px; border-radius: 8px;">
-            <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
-          </a>
-        </div>
-
-        <div class="col-12 mb-4">
-          <p style="background-color: #5856D6; display: inline-block; padding: 0 5px;">Wallnote</p>
-          <p>Wallnote reimagines your iPhone's wallpaper as a canvas for your most important notes. Quick screenshot transforms it into your wallpaper, ensuring your notes are always just a glance away.</p>
-        </div>
-
-        <div class="col-12 mb-4">
-          <p style="color: #003399">CaminoQuest</p>
-          <p>Walk the Camino de Santiago wherever you are. In the App Store in summer 2025.</p>
-        </div>
-      </div>
-
-    <div class="container">
-  <div class="row">
+  <!-- App grid -->
+  <div class="row mb-5">
 
     <div class="col-12 col-md-6 col-lg-3 mb-4">
-      <a href="assets/YesScreenshot1.png" class="glightbox" data-gallery="apps" data-title="¥€$ Expense Tracker">
+      <a href="assets/YesScreenshot1.png"
+         class="glightbox"
+         data-gallery="apps"
+         data-title="¥€$ Expense Tracker">
         <div class="square">
           <img src="assets/YesLogo.png" alt="¥€$ Expense Tracker">
           <div class="square-caption">¥€$ Expense Tracker</div>
@@ -164,7 +137,10 @@
     </div>
 
     <div class="col-12 col-md-6 col-lg-3 mb-4">
-      <a href="assets/FlagSpotScreenshot1.png" class="glightbox" data-gallery="apps" data-title="FlagSpot">
+      <a href="assets/FlagSpotScreenshot1.png"
+         class="glightbox"
+         data-gallery="apps"
+         data-title="FlagSpot">
         <div class="square">
           <img src="assets/FlagSpotLogo.png" alt="FlagSpot">
           <div class="square-caption">FlagSpot</div>
@@ -173,7 +149,10 @@
     </div>
 
     <div class="col-12 col-md-6 col-lg-3 mb-4">
-      <a href="assets/WallnoteScreenshot1.png" class="glightbox" data-gallery="apps" data-title="Wallnote">
+      <a href="assets/WallnoteScreenshot1.png"
+         class="glightbox"
+         data-gallery="apps"
+         data-title="Wallnote">
         <div class="square">
           <img src="assets/WallnoteLogo.png" alt="Wallnote">
           <div class="square-caption">Wallnote</div>
@@ -182,7 +161,10 @@
     </div>
 
     <div class="col-12 col-md-6 col-lg-3 mb-4">
-      <a href="assets/CaminoQuestScreenshot1.png" class="glightbox" data-gallery="apps" data-title="CaminoQuest">
+      <a href="assets/CaminoQuestScreenshot1.png"
+         class="glightbox"
+         data-gallery="apps"
+         data-title="CaminoQuest">
         <div class="square">
           <img src="assets/CaminoQuestLogo.png" alt="CaminoQuest">
           <div class="square-caption">CaminoQuest</div>
@@ -191,7 +173,60 @@
     </div>
 
   </div>
+
+  <!-- App descriptions -->
+  <div class="row">
+
+    <div class="col-12 mb-4">
+      <p style="color:#85BB65">¥€$ Expense Tracker</p>
+      <p>
+        Discover ¥€$, the expense tracker that is as unique as you are.
+        Create up to five categories with custom names, budgets, colors,
+        and emojis. Track expenses effortlessly and start saving.
+      </p>
+      <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774"
+         target="_blank"
+         style="text-decoration:none;">
+        <img src="assets/YesLogo.png"
+             alt="Yes Logo"
+             style="width:40px;height:40px;border-radius:8px;">
+        <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
+             alt="Download on the App Store">
+      </a>
+    </div>
+
+    <div class="col-12 mb-4">
+      <p style="background-color:#0A84FF;display:inline-block;padding:0 5px;">
+        FlagSpot
+      </p>
+      <p>
+        Test and sharpen your flag knowledge with a clean,
+        distraction-free experience designed for quick play.
+      </p>
+    </div>
+
+    <div class="col-12 mb-4">
+      <p style="background-color:#5856D6;display:inline-block;padding:0 5px;">
+        Wallnote
+      </p>
+      <p>
+        Turn your wallpaper into a reminder board.
+        Notes are always visible with one simple screenshot.
+      </p>
+    </div>
+
+    <div class="col-12 mb-4">
+      <p style="color:#003399">CaminoQuest</p>
+      <p>
+        Walk the Camino de Santiago wherever you are.
+        Coming to the App Store in summer 2025.
+      </p>
+    </div>
+
+  </div>
+
 </div>
+
 
   </body>
 </html>
