@@ -14,11 +14,12 @@
         background-color: transparent !important;
       }
       .navbar-brand {
-        margin: 0;
-        padding: 0;
+        padding: 0 !important;
+        margin: 0 !important;
       }
       .navbar-brand img {
         height: 42px;
+        display: block; /* removes inline-img baseline gap */
       }
       .navbar-toggler:focus {
         box-shadow: none;
@@ -30,12 +31,14 @@
         top: 0;
         z-index: 999;
         height: auto;
+        padding: 0 !important;
       }
       body {
         background-image: url('assets/jungle.png');
         background-repeat: no-repeat;
         background-size: cover;
         height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        margin: 0;
       }
       h1, p {
         font-family: 'Lato', sans-serif;
@@ -46,6 +49,9 @@
       .container {
         padding-top: 10%;
       }
+
+      
+
 
       /* Media query for smaller devices */
       @media screen and (max-width: 768px) {
@@ -98,7 +104,7 @@
       // Remove the "navbar-scroll" class from the navigation bar
       $('.navbar').removeClass('navbar-scroll');
       // Restore the original logo image size
-      $('.navbar-brand img').css('height', '66px');
+      $('.navbar-brand img').css('height', '42px');
       if (!isNavbarOpen) { // Only remove 'noshow' class if the navbar is closed
         $('#myContainer').removeClass('noshow');
       }
