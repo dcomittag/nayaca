@@ -5,10 +5,24 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
+</script>
+
 
     <style>
       body {
@@ -34,10 +48,35 @@
       }
 
       .square {
-        width: 100%;
-        aspect-ratio: 1 / 1; /* perfect square */
-        border-radius: 8px;
-      }
+      position: relative;
+      width: 100%;
+      padding-top: 100%; /* square aspect ratio */
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .square img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .square:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .square-caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 5px 0;
+      font-weight: bold;
+      font-size: 1rem;
+    }
 
       @media screen and (max-width: 768px) {
         .navbar-nav .nav-item {
@@ -80,7 +119,7 @@
     </nav>
 
     <!-- Container -->
-    <div class="container">
+    <div class="container mt-5">
       <!-- App descriptions -->
       <div class="row">
         <div class="col-12 mb-4">
@@ -128,5 +167,48 @@
   </div>
 </div>
     </div>
+
+    <div class="container">
+  <div class="row">
+
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+      <a href="assets/YesScreenshot1.png" class="glightbox" data-gallery="apps" data-title="¥€$ Expense Tracker">
+        <div class="square bg-primary">
+          <img src="assets/YesLogo.png" alt="¥€$ Expense Tracker">
+          <div class="square-caption">¥€$ Expense Tracker</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+      <a href="assets/FlagSpotScreenshot1.png" class="glightbox" data-gallery="apps" data-title="FlagSpot">
+        <div class="square bg-success">
+          <img src="assets/FlagSpotLogo.png" alt="FlagSpot">
+          <div class="square-caption">FlagSpot</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+      <a href="assets/WallnoteScreenshot1.png" class="glightbox" data-gallery="apps" data-title="Wallnote">
+        <div class="square bg-warning">
+          <img src="assets/WallnoteLogo.png" alt="Wallnote">
+          <div class="square-caption">Wallnote</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+      <a href="assets/CaminoQuestScreenshot1.png" class="glightbox" data-gallery="apps" data-title="CaminoQuest">
+        <div class="square bg-danger">
+          <img src="assets/CaminoQuestLogo.png" alt="CaminoQuest">
+          <div class="square-caption">CaminoQuest</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
   </body>
 </html>
