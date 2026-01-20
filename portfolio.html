@@ -46,6 +46,11 @@
       .container {
         padding-top: 10%;
       }
+      .square {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes it a perfect square */
+    border-radius: 8px;   /* optional rounded corners */
+  }
 
       /* Media query for smaller devices */
       @media screen and (max-width: 768px) {
@@ -76,12 +81,6 @@
           }
         });
       });
-
-      .square {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Makes it a perfect square */
-    border-radius: 8px;   /* optional rounded corners */
-  }
     </script>
   </head>
   <body>
@@ -120,24 +119,6 @@
           </a>
           <br><br>
         </div>
-
-
-  <div class="col-12 col-md-6 col-lg-3">
-    <div class="square bg-primary">
-    </div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-3">
-    <div class="square bg-success"></div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-3">
-    <div class="square bg-warning"></div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-3">
-    <div class="square bg-danger"></div>
-  </div>
-
-
-
 
         <div class="col-sm-12">
           <p style="color: #85BB65 ">¥€$ Expense Tracker</p>
@@ -186,6 +167,22 @@
             <a href="mailto:hello@nayaca.com">hello@nayaca.com</a></p>
         </div>
       </div>
+      <div class="col-12">
+  <div class="row g-3">
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="square bg-primary"></div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="square bg-success"></div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="square bg-warning"></div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="square bg-danger"></div>
+    </div>
+  </div>
+</div>
     </div>
   </body>
 </html>
