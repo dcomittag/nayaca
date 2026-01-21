@@ -1,100 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>NAYACA</title>
+/* ------------------ WORKS PAGE ------------------ */
 
-  <!-- Favicons -->
-  <link rel="icon" href="/assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+/* App row / grid like iPhone home screen */
+.app-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+}
 
-  <!-- Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+.app-col {
+  flex: 1 1 0;
+  text-align: center;
+  margin: 0 0.25rem; /* spacing between logos */
+}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Newsreader:wght@700&display=swap" rel="stylesheet">
+.app-logo {
+  max-width: 80%; /* leave a little space from edges */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+/* Optional: captions under logos */
+.app-caption {
+  font-size: 0.75rem; /* mimics iPhone home screen labels */
+  margin-top: 0.25rem;
+}
 
-  <!-- Common & page-specific CSS -->
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="works.css">
-
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand" href="/">
-      <img src="assets/NAYACA_white_transparent.png" alt="Logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item active"><a class="nav-link" href="works.html">WORKS</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
-        <li class="nav-item"><a class="nav-link" href="legal.html">LEGAL</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Main container -->
-  <div class="container mt-5">
-
-    <!-- App logos row -->
-    <div class="app-row">
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank">
-          <img src="assets/YesLogo.png" alt="¥€$ Expense Tracker" class="app-logo">
-        </a>
-      </div>
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/flagspot/idXXXX" target="_blank">
-          <img src="assets/FlagSpotLogo.png" alt="FlagSpot" class="app-logo">
-        </a>
-      </div>
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/caminoquest/idXXXX" target="_blank">
-          <img src="assets/CaminoQuestLogo.png" alt="CaminoQuest" class="app-logo">
-        </a>
-      </div>
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank">
-          <img src="assets/WallnoteLogo.png" alt="Wallnote" class="app-logo">
-        </a>
-      </div>
-    </div>
-
-    <!-- App descriptions -->
-    <div class="row mt-4">
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#85BB65;">¥€$ Expense Tracker</p>
-        <p>Discover ¥€$, the expense tracker that is as unique as you are. Create up to five categories with custom names, budgets, colors, and emojis. Track expenses effortlessly and start saving.</p>
-      </div>
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#0A84FF;">FlagSpot</p>
-        <p>Test and sharpen your flag knowledge with a clean, distraction-free experience designed for quick play.</p>
-      </div>
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#FFC72C;">CaminoQuest</p>
-        <p>Walk the Camino de Santiago wherever you are. Coming to the App Store in summer 2025.</p>
-      </div>
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#5856D6;">Wallnote</p>
-        <p>Turn your wallpaper into a reminder board. Notes are always visible with one simple screenshot.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Common JS -->
-  <script src="common.js"></script>
-
-</body>
-</html>
+/* Responsive tweaks */
+@media screen and (max-width: 576px) {
+  .app-row {
+    flex-wrap: nowrap; /* force single row even on tiny screens */
+  }
+}
