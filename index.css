@@ -19,3 +19,19 @@
       .container {
         padding-top: 10%;
       }
+
+      /* Media query for smaller devices */
+      @media screen and (max-width: 768px) {
+        body {
+          background-position-x: 36%;
+        }
+        .navbar-nav .nav-item {
+          margin-left: auto;
+        }
+        #myContainer {
+          display: block;
+        }
+        #myContainer.noshow {
+          display: none;
+        }
+      }
