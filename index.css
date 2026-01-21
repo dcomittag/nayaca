@@ -1,3 +1,22 @@
 .navbar--transparent {
   background-color: transparent;
 }
+
+      
+      .navbar {
+        background-color: transparent !important;
+        transition: all 0.3s;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        height: auto;
+      }
+      body {
+        background-image: url('assets/jungle.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+      }
+      .container {
+        padding-top: 10%;
+      }
