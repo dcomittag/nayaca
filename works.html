@@ -1,181 +1,141 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>NAYACA</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<head>
+  <title>NAYACA</title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <style>
-      /* Navbar */
-      .navbar {
-        background-color: #7FFBF0 !important;
-        transition: all 0.3s;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-      }
-      .navbar-brand img {
-        height: 42px;
-      }
-      .navbar-toggler:focus {
-        box-shadow: none;
-        outline: none;
-      }
+  <style>
+    /* Navbar */
+    .navbar {
+      background-color: #7FFBF0 !important;
+      transition: all 0.3s;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .navbar-brand img {
+      height: 42px;
+    }
+    .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
 
-      /* App grid */
-      .app-grid {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap; /* keep 4 in a row */
-        /* padding: 1rem 0; */
-      }
-      .app-item {
-        flex: 0 0 22%; /* 4 items with spacing */
-        text-align: center;
-      }
-      .app-square {
-        position: relative;
-        width: 100%;
-        padding-top: 100%; /* square */
-        border-radius: 16px;
-        overflow: hidden;
-        background-color: rgba(255,255,255,0.1); /* subtle background */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .app-square img {
-        max-width: 60%;
-        max-height: 60%;
-      }
-      .app-label {
-        margin-top: 4px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 1.2;
-        color: black;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+    /* App grid */
+    .app-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      margin-bottom: 2rem;
+    }
+    .app-col {
+      flex: 1 1 0;
+      text-align: center;
+      margin: 0 0.25rem; /* small spacing between logos */
+    }
+    .app-logo {
+      max-width: 80%; /* logo smaller than column to mimic iPhone spacing */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .app-name {
+      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 12px; /* iOS icon label size */
+      margin-top: 4px;
+      color: black;
+    }
 
-      /* App descriptions */
-      .app-description {
-        margin-top: 2rem;
-      }
-      .app-description p {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: black;
-      }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: black;
+    }
 
-      @media screen and (max-width: 768px) {
-        .navbar-nav .nav-item {
-          margin-left: auto;
-        }
-        .app-grid {
-          flex-wrap: wrap;
-        }
-        .app-item {
-          flex: 0 0 48%; /* two per row on very small screens */
-          margin-bottom: 1rem;
-        }
+    @media screen and (max-width: 576px) {
+      .app-row {
+        flex-wrap: nowrap; /* force single row even on tiny screens */
       }
-    </style>
+    }
+  </style>
+</head>
 
-    <script>
-      $(document).ready(function() {
-        $(window).scroll(function() {
-          if ($(this).scrollTop() > 0) {
-            $('.navbar').addClass('navbar-scroll');
-            $('.navbar-brand img').css('height', '33px');
-          } else {
-            $('.navbar').removeClass('navbar-scroll');
-            $('.navbar-brand img').css('height', '42px');
-          }
-        });
-      });
-    </script>
-  </head>
+<body>
 
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand" href="/">
-        <img src="assets/NAYACA_white_transparent.png" alt="Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a class="nav-link" href="works.html">WORKS</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
-          <li class="nav-item"><a class="nav-link" href="legal.html">LEGAL</a></li>
-        </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand" href="/">
+      <img src="assets/NAYACA_white_transparent.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="works.html">WORKS</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link" href="legal.html">LEGAL</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main container -->
+  <div class="container mt-5">
+
+    <!-- App logos row -->
+    <div class="app-row">
+      <div class="app-col">
+        <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank">
+          <img src="assets/YesLogo.png" alt="¥€$ Expense Tracker" class="app-logo">
+          <div class="app-name">¥€$</div>
+        </a>
       </div>
-    </nav>
-
-    <!-- App grid -->
-    <div class="container mt-5">
-      <div class="app-row" style="display:flex; justify-content:space-between; margin:0; padding:1rem 0;">
-  <div class="app-item" style="flex:0 0 22%; text-align:center;">
-    <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank">
-      <img src="assets/YesLogo.png" alt="¥€$ Expense Tracker" style="width:100%; border-radius:16px;">
-      <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:12px; margin-top:2px;">¥€$ Expense Tracker</div>
-    </a>
-  </div>
-
-  <div class="app-item" style="flex:0 0 22%; text-align:center;">
-    <a href="https://apps.apple.com/th/app/flagspot/id123456789" target="_blank">
-      <img src="assets/FlagSpotLogo.png" alt="FlagSpot" style="width:100%; border-radius:16px;">
-      <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:12px; margin-top:2px;">FlagSpot</div>
-    </a>
-  </div>
-
-  <div class="app-item" style="flex:0 0 22%; text-align:center;">
-    <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank">
-      <img src="assets/WallnoteLogo.png" alt="Wallnote" style="width:100%; border-radius:16px;">
-      <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:12px; margin-top:2px;">Wallnote</div>
-    </a>
-  </div>
-
-  <div class="app-item" style="flex:0 0 22%; text-align:center;">
-    <a href="https://apps.apple.com/th/app/caminoquest/id123456789" target="_blank">
-      <img src="assets/CaminoQuestLogo.png" alt="CaminoQuest" style="width:100%; border-radius:16px;">
-      <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:12px; margin-top:2px;">CaminoQuest</div>
-    </a>
-  </div>
-</div>
-
-      <!-- App descriptions -->
-      <div class="app-description">
-        <div class="mb-4">
-          <p style="color:#85BB65">¥€$ Expense Tracker</p>
-          <p>Discover ¥€$, the expense tracker that is as unique as you are. Create up to five categories with custom names, budgets, colors, and emojis. Track expenses effortlessly and start saving.</p>
-        </div>
-
-        <div class="mb-4">
-          <p style="background-color:#0A84FF;display:inline-block;padding:0 5px;">FlagSpot</p>
-          <p>Test and sharpen your flag knowledge with a clean, distraction-free experience designed for quick play.</p>
-        </div>
-
-        <div class="mb-4">
-          <p style="background-color:#5856D6;display:inline-block;padding:0 5px;">Wallnote</p>
-          <p>Turn your wallpaper into a reminder board. Notes are always visible with one simple screenshot.</p>
-        </div>
-
-        <div class="mb-4">
-          <p style="color:#003399">CaminoQuest</p>
-          <p>Walk the Camino de Santiago wherever you are. Coming to the App Store in summer 2025.</p>
-        </div>
+      <div class="app-col">
+        <a href="https://apps.apple.com/th/app/flagspot/idXXXX" target="_blank">
+          <img src="assets/FlagSpotLogo.png" alt="FlagSpot" class="app-logo">
+          <div class="app-name">FlagSpot</div>
+        </a>
+      </div>
+      <div class="app-col">
+        <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank">
+          <img src="assets/WallnoteLogo.png" alt="Wallnote" class="app-logo">
+          <div class="app-name">Wallnote</div>
+        </a>
+      </div>
+      <div class="app-col">
+        <a href="https://apps.apple.com/th/app/caminoquest/idXXXX" target="_blank">
+          <img src="assets/CaminoQuestLogo.png" alt="CaminoQuest" class="app-logo">
+          <div class="app-name">CaminoQuest</div>
+        </a>
       </div>
     </div>
-  </body>
+
+    <!-- App descriptions -->
+    <div class="row">
+      <div class="col-12 mb-4">
+        <p style="color:#85BB65">¥€$ Expense Tracker</p>
+        <p>Discover ¥€$, the expense tracker that is as unique as you are. Create up to five categories with custom names, budgets, colors, and emojis. Track expenses effortlessly and start saving.</p>
+      </div>
+      <div class="col-12 mb-4">
+        <p style="background-color:#0A84FF;display:inline-block;padding:0 5px;">FlagSpot</p>
+        <p>Test and sharpen your flag knowledge with a clean, distraction-free experience designed for quick play.</p>
+      </div>
+      <div class="col-12 mb-4">
+        <p style="background-color:#5856D6;display:inline-block;padding:0 5px;">Wallnote</p>
+        <p>Turn your wallpaper into a reminder board. Notes are always visible with one simple screenshot.</p>
+      </div>
+      <div class="col-12 mb-4">
+        <p style="color:#003399">CaminoQuest</p>
+        <p>Walk the Camino de Santiago wherever you are. Coming to the App Store in summer 2025.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
 </html>
