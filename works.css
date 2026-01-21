@@ -21,10 +21,9 @@
   margin: 0 auto;
 }
 
-/* Optional: captions under logos */
-.app-caption {
-  font-size: 0.75rem; /* mimics iPhone home screen labels */
-  margin-top: 0.25rem;
+.app-title {
+  display:inline-block;
+  padding:0 5px;
 }
 
 /* Responsive tweaks */
