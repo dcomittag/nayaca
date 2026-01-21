@@ -1,69 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>NAYACA</title>
+
+  <!-- Favicons -->
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="common.css">
-<link rel="stylesheet" href="works.css">
 
+  <!-- Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <style>
-    /* Navbar */
-    .navbar {
-      background-color: #7FFBF0 !important;
-      transition: all 0.3s;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    .navbar-brand img {
-      height: 42px;
-    }
-    .navbar-toggler:focus {
-      outline: none;
-      box-shadow: none;
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Newsreader:wght@700&display=swap" rel="stylesheet">
 
-    /* App grid */
-    .app-row {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      margin-bottom: 2rem;
-    }
-    .app-col {
-      flex: 1 1 0;
-      text-align: center;
-      margin: 0 0.25rem; /* small spacing between logos */
-    }
-    .app-logo {
-      max-width: 80%; /* logo smaller than column to mimic iPhone spacing */
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    body {
-      font-family: 'Lato', sans-serif;
-      color: black;
-    }
+  <!-- Common & page-specific CSS -->
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="works.css">
 
-    @media screen and (max-width: 576px) {
-      .app-row {
-        flex-wrap: nowrap; /* force single row even on tiny screens */
-      }
-    }
-  </style>
 </head>
-
 <body>
 
   <!-- Navbar -->
@@ -71,11 +30,11 @@
     <a class="navbar-brand" href="/">
       <img src="assets/NAYACA_white_transparent.png" alt="Logo">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item active"><a class="nav-link" href="works.html">WORKS</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
         <li class="nav-item"><a class="nav-link" href="legal.html">LEGAL</a></li>
@@ -111,26 +70,31 @@
     </div>
 
     <!-- App descriptions -->
-    <div class="row">
+    <div class="row mt-4">
       <div class="col-12 mb-4">
-        <p style="background-color:#85BB65;display:inline-block;padding:0 5px;">¥€$ Expense Tracker</p>
+        <p class="app-title" style="background-color:#85BB65;">¥€$ Expense Tracker</p>
         <p>Discover ¥€$, the expense tracker that is as unique as you are. Create up to five categories with custom names, budgets, colors, and emojis. Track expenses effortlessly and start saving.</p>
       </div>
       <div class="col-12 mb-4">
-        <p style="background-color:#0A84FF;display:inline-block;padding:0 5px;">FlagSpot</p>
+        <p class="app-title" style="background-color:#0A84FF;">FlagSpot</p>
         <p>Test and sharpen your flag knowledge with a clean, distraction-free experience designed for quick play.</p>
       </div>
       <div class="col-12 mb-4">
-        <p style="background-color:#FFC72C;display:inline-block;padding:0 5px;">CaminoQuest</p>
+        <p class="app-title" style="background-color:#FFC72C;">CaminoQuest</p>
         <p>Walk the Camino de Santiago wherever you are. Coming to the App Store in summer 2025.</p>
       </div>
       <div class="col-12 mb-4">
-        <p style="background-color:#5856D6;display:inline-block;padding:0 5px;">Wallnote</p>
+        <p class="app-title" style="background-color:#5856D6;">Wallnote</p>
         <p>Turn your wallpaper into a reminder board. Notes are always visible with one simple screenshot.</p>
       </div>
     </div>
 
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Common JS -->
+  <script src="common.js"></script>
 
 </body>
 </html>
