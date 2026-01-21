@@ -1,7 +1,9 @@
 // Navbar shrink on scroll
+// Cache the navbar once
+const navbar = document.querySelector('.navbar');
+
 window.addEventListener('scroll', () => {
-  document
-    .querySelector('.navbar')
-    ?.classList.toggle('navbar-scroll', window.scrollY > 0);
+  navbar.classList.toggle('navbar-scroll', window.scrollY > 0);
 });
+
 
