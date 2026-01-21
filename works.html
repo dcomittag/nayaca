@@ -18,6 +18,10 @@
 
       .navbar {
         background-color: #7FFBF0 !important;
+        transition: all 0.3s;
+        position: sticky;
+        top: 0;
+        z-index: 999;
       }
 
       .navbar-brand img {
@@ -45,7 +49,6 @@
         top: 0; left: 0;
         width: 100%; height: 100%;
         object-fit: contain; /* keep logos sharp */
-        padding: 10%; /* avoid edge collision */
       }
       .app-square:hover {
         transform: scale(1.05);
