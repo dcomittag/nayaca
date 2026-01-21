@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Links */
 .nav-item.active > .nav-link {
   font-weight: 700; /* highlight active page */
+  color: white;
 }
 
 
