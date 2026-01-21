@@ -1,10 +1,7 @@
 // Navbar shrink on scroll
 window.addEventListener('scroll', () => {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 0) {
-    navbar.classList.add('navbar-scroll');
-  } else {
-    navbar.classList.remove('navbar-scroll');
-  }
+  document
+    .querySelector('.navbar')
+    ?.classList.toggle('navbar-scroll', window.scrollY > 0);
 });
 

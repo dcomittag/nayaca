@@ -19,23 +19,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar */
 .navbar {
-  background-color: #7FFBF0 !important;
-  transition: all 0.3s;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  transition: padding 0.25s ease, background-color 0.3s;
+}
+
+.navbar-scroll {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .navbar-brand img {
   height: 42px;
-  transition: transform 0.3s, height 0.3s;
+  transition: height 0.25s ease;
 }
 
-/* When scrolled */
 .navbar-scroll .navbar-brand img {
-  transform: scale(0.78); /* roughly same as 42 → 33px */
+  height: 32px;
 }
-
 
 .navbar-toggler:focus {
   outline: none;
