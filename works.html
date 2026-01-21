@@ -47,8 +47,8 @@
     }
     .app-name {
       font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 12px; /* iOS icon label size */
-      margin-top: 4px;
+      font-size: 0.75rem; /* fallback */
+  font-size: clamp(0.7rem, 2.2vw, 0.85rem);
       color: black;
     }
 
@@ -102,15 +102,15 @@
         </a>
       </div>
       <div class="app-col">
-        <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank">
-          <img src="assets/WallnoteLogo.png" alt="Wallnote" class="app-logo">
-          <div class="app-name">Wallnote</div>
-        </a>
-      </div>
-      <div class="app-col">
         <a href="https://apps.apple.com/th/app/caminoquest/idXXXX" target="_blank">
           <img src="assets/CaminoQuestLogo.png" alt="CaminoQuest" class="app-logo">
           <div class="app-name">CaminoQuest</div>
+        </a>
+      </div>
+      <div class="app-col">
+        <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank">
+          <img src="assets/WallnoteLogo.png" alt="Wallnote" class="app-logo">
+          <div class="app-name">Wallnote</div>
         </a>
       </div>
     </div>
