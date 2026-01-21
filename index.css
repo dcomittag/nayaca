@@ -4,7 +4,6 @@
 
       
       .navbar {
-        background-color: transparent !important;
         transition: all 0.3s;
         position: sticky;
         top: 0;
