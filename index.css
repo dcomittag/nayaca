@@ -1,15 +1,15 @@
-.navbar--transparent {
+/* .navbar--transparent {
   background-color: transparent;
-}
+} */
 
       
-      .navbar {
+      /* .navbar {
         transition: all 0.3s;
         position: sticky;
         top: 0;
         z-index: 999;
         height: auto;
-      }
+      } */
       body {
         background-image: url('assets/jungle.png');
         background-repeat: no-repeat;
