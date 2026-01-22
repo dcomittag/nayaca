@@ -33,7 +33,7 @@ body {
   font-family: 'Lato', sans-serif;
   height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   margin: 0;
-  overflow: hidden; /* prevent scrolling */
+  /* overflow: hidden; */
 }
 
 /* Container for the welcome text */
@@ -48,7 +48,7 @@ body {
 /* Optional: responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     body {
-          background-position-x: 33%;
+          background-position-x: 40%;
         }
   #myContainer {
     bottom: 1rem;
