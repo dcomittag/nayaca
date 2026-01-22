@@ -10,7 +10,7 @@ body {
   background-image: url('assets/jungle.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
 }
 
 /* Container spacing */
