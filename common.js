@@ -6,4 +6,10 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('navbar-scroll', window.scrollY > 0);
 });
 
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('open');
+  });
 
