@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a.active {
-  color: #FFC72C; /* your highlight color */
+  color: #7FFBF0; /* your highlight color */
   font-weight: 700;
 }
 

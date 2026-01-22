@@ -4,7 +4,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  overflow: hidden; /* disables scrolling */
+  /* overflow: hidden;  disables scrolling */
 }
 
 /* Jungle background */
@@ -48,7 +48,7 @@ body {
 /* Optional: responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     body {
-          background-position-x: 43%;
+          background-position-x: 45%;
         }
   #myContainer {
     bottom: 1rem;
