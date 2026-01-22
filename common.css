@@ -55,6 +55,12 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
 }
 
+.nav-links a.active {
+  color: #FFC72C; /* your highlight color */
+  font-weight: 700;
+}
+
+
 /* Hamburger for mobile */
 .nav-toggle {
   display: none;
