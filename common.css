@@ -18,35 +18,82 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navbar */
-.navbar {
-  padding: 16px 0;
-  background-color: #7FFBF0;
-  transition: padding 0.25s ease, background-color 0.25s ease;
+/* NAV BASE */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
 }
 
-.navbar-scroll {
-  padding: 8px 0;
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar-brand img {
-  height: 40px;
-  transition: height 0.25s ease;
+/* LOGO */
+.nav-logo img {
+  height: 36px;
 }
 
-.navbar-scroll .navbar-brand img {
-  height: 30px;
+/* LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Links */
-.nav-item.active > .nav-link {
-  font-weight: 700; /* highlight active page */
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
   color: white;
 }
+
+/* ACTIVE */
+.nav-links a.active {
+  font-weight: 700;
+  border-bottom: 2px solid currentColor;
+}
+
+/* TOGGLE BUTTON */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    flex-direction: column;
+    background: rgba(0,0,0,0.85);
+    padding: 1rem 1.5rem;
+
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
 
 
 
