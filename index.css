@@ -1,34 +1,55 @@
 /* Only homepage-specific styles */
 
-/* Transparent navbar */
-.navbar--transparent {
-  background-color: transparent;
+/* Make page full viewport and prevent scrolling */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* disables scrolling */
 }
 
 /* Jungle background */
-body {
+/* body {
   background-image: url('assets/jungle.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+} */
+
+
+/* Background image covering whole screen */
+/* body {
+  background-image: url('assets/jungle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
+} */
+
+body {
+  background-image: url('assets/jungle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
+  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  margin: 0;
+  overflow: hidden; /* prevent scrolling */
 }
 
-/* Container spacing */
+/* Container for the welcome text */
 #myContainer {
-  padding-top: 10%;
+  position: absolute;
+  bottom: 2rem;    /* distance from bottom */
+  right: 2rem;     /* distance from right */
+  text-align: right;
+  color: white;    /* or any color that stands out on your background */
 }
 
-/* Media queries for smaller devices */
-@media screen and (max-width: 768px) {
-  body {
-    background-position-x: 36%;
-  }
-
+/* Optional: responsive adjustments for smaller screens */
+@media (max-width: 768px) {
   #myContainer {
-    display: block;
-  }
-
-  #myContainer.noshow {
-    display: none;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.9rem;
   }
 }
