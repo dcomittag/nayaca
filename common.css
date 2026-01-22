@@ -1,47 +1,24 @@
-/* ------------------ GLOBAL ------------------ */
-
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
-
-body {
-  font-family: 'Lato', sans-serif;
-  color: black;
-  margin: 0;
-  padding: 0;
-}
-
-/* Headlines use Newsreader */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Newsreader', serif;
-  font-weight: 700;
-}
-
 /* Navbar */
-/* NAV BASE */
 .nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: transparent;
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #7FFBF0;
+  transition: padding 0.25s ease, background-color 0.25s ease;
 }
 
-/* LOGO */
+/* Logo */
 .nav-logo img {
-  height: 36px;
+  height: 40px; /* default */
+  display: block;
+  transition: height 0.25s ease;
 }
 
-/* LINKS */
+/* Links on right */
 .nav-links {
   list-style: none;
   display: flex;
@@ -56,13 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* ACTIVE */
-.nav-links a.active {
-  font-weight: 700;
-  border-bottom: 2px solid currentColor;
-}
-
-/* TOGGLE BUTTON */
+/* Hamburger for mobile */
 .nav-toggle {
   display: none;
   background: none;
@@ -72,41 +43,30 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+/* Mobile collapse */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
-
   .nav-links {
     position: absolute;
     top: 100%;
     right: 0;
-
     flex-direction: column;
     background: rgba(0,0,0,0.85);
     padding: 1rem 1.5rem;
-
     display: none;
   }
-
   .nav-links.open {
     display: flex;
   }
 }
 
-
-
-
-/* Links */
-a {
-  text-decoration: none;
-  color: inherit;
+/* Shrink-on-scroll */
+.nav-scroll {
+  padding: 0.25rem 1rem;
 }
 
-/* Utility spacing */
-.mb-4 {
-  margin-bottom: 1.5rem !important;
-}
-.mb-5 {
-  margin-bottom: 3rem !important;
+.nav-scroll .nav-logo img {
+  height: 30px;
 }
