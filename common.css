@@ -97,12 +97,6 @@ h1, h2, h3, h4, h5, h6 {
   .nav-links.open {
     max-height: 300px; /* enough for 3 links */
   }
-
-  .nav-links a {
-    padding: 0.75rem 1rem;
-    background: none;
-    color: white;
-  }
 }
 
 

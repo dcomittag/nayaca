@@ -37,7 +37,7 @@ body {
 }
 
 /* Container for the welcome text */
-#myContainer {
+#sloganContainer {
   position: absolute;
   bottom: 2rem;    /* distance from bottom */
   right: 2rem;     /* distance from right */
