@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile collapse */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
@@ -90,7 +90,40 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 500px;
     display: flex;
   }
+} */
+
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap; /* allows links to go below */
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    display: flex;       /* IMPORTANT */
+    background: black;   /* optional */
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.open {
+    max-height: 300px; /* enough for 3 links */
+  }
+/* 
+  .nav-links a {
+    padding: 0.75rem 1rem;
+    background: none;
+    color: white;
+  } */
 }
+
 
 
 
