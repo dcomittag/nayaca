@@ -48,7 +48,7 @@ body {
 /* Optional: responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     body {
-          background-position-x: 45%;
+          background-position-x: 50%;
         }
   #myContainer {
     bottom: 1rem;
