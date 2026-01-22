@@ -72,26 +72,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile collapse */
-/* @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    flex-direction: column;
-    max-height: 0;
-    /* background: rgba(0,0,0,0.85); */
-    padding: 1rem 1.5rem;
-    display: none;
-  }
-  .nav-links.open {
-    max-height: 500px;
-    display: flex;
-  }
-} */
-
 @media (max-width: 768px) {
   .nav {
     flex-wrap: wrap; /* allows links to go below */
