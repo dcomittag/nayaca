@@ -60,6 +60,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+/* Call-to-action links */
+.contact-cta a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-cta a:hover {
+  color: #ffbcd9;
+}
 
 /* Hamburger for mobile */
 .nav-toggle {
