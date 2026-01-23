@@ -26,13 +26,23 @@ body {
 }
 
 .app-title {
-  display:inline-block;
-  padding:0 5px;
   margin-bottom: 0.25rem;
 }
 
 .app-title.yes {
   color: #85BB65;
+}
+
+.app-title.flagspot {
+  color: #0A84FF;
+}
+
+.app-title.caminoquest {
+  color: #FFC72C;
+}
+
+.app-title.wallnote { 
+  color: #5856D6;
 }
 
 /* Responsive tweaks */
