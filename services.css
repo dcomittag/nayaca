@@ -1,3 +1,15 @@
 body {
-  background-color: #ffbcd9;
+  background-color: #F3F4F6;
+}
+
+.contact-cta a {
+  color: #7FFBF0;
+  font-weight: 500;
+  text-decoration: none;
+  transition: font-weight 0.15s ease, opacity 0.15s ease;
+}
+
+.contact-cta a:hover {
+  font-weight: 700;
+  opacity: 0.85;
 }
