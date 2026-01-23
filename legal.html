@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NAYACA</title>
+  <title>NAYACA – Legal</title>
 
   <!-- Favicons -->
   <link rel="icon" href="/assets/favicon.ico">
@@ -12,63 +12,74 @@
   <!-- Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Newsreader:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5 -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Common & page-specific CSS -->
+  <!-- Common CSS -->
   <link rel="stylesheet" href="common.css">
-
 </head>
 
 <body>
-  <div class="container-fluid"></div>
-  <!-- Navbar -->
+
+  <!-- NAVBAR (shared across all pages) -->
   <nav class="nav">
-  <a href="/" class="nav-logo">
-    <img src="assets/NAYACA_raw_transparent.png" alt="Nayaca">
-  </a>
+    <a href="/" class="nav-logo">
+      <img src="assets/NAYACA_raw_transparent.png" alt="Nayaca">
+    </a>
 
-  <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
 
-  <ul class="nav-links">
-    <li><a href="works.html">WORKS</a></li>
-    <li><a href="services.html">SERVICES</a></li>
-    <li><a href="legal.html" class="active">LEGAL</a></li>
-  </ul>
-</nav>
+    <ul class="nav-links">
+      <li><a href="works.html">WORKS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="legal.html" class="active">LEGAL</a></li>
+    </ul>
+  </nav>
 
-  <!-- Main content -->
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8">
-        <h4>Privacy</h4>
-        <p>
-          At Nayaca, we take your privacy seriously. Our apps ¥€$ and Wallnote do not collect any sensitive user information,
-          and all data is stored locally on your device. We do not share or sell any user data to third parties. We may collect
-          non-personally identifiable information such as usage statistics, crash reports, and device information in order to
-          improve the app and provide a better user experience. This information is collected anonymously and is used for internal
-          purposes only. We do not use any encryption or specific Apple security features to protect user data since no sensitive
-          information is collected or stored within the app. However, we work closely with Apple to ensure that our app complies
-          with all relevant guidelines and standards for iOS app development.
-        </p>
-        <p>Questions? Contact us at: <a href="mailto:hello@nayaca.com">hello@nayaca.com</a></p>
-        <h5>Responsible for all legal matters</h5>
-        <p>
-          Daniel Mittag, LL.M.<br>
-          Schlörstr. 23<br>
-          80634 Munich<br>
-          Germany
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-    <!-- Bootstrap JS -->
+  <!-- MAIN CONTENT -->
+  <main class="container mt-5 mb-5" style="max-width: 720px;">
+    <h4>Privacy</h4>
+
+    <p>
+      At Nayaca, we take your privacy seriously. Our apps ¥€$ and Wallnote do not
+      collect any sensitive user information, and all data is stored locally on
+      your device. We do not share or sell any user data to third parties.
+    </p>
+
+    <p>
+      We may collect non-personally identifiable information such as usage
+      statistics, crash reports, and device information in order to improve the
+      app and provide a better user experience. This information is collected
+      anonymously and is used for internal purposes only.
+    </p>
+
+    <p>
+      We do not use encryption or specific Apple security features to protect user
+      data since no sensitive information is collected or stored within the app.
+      However, we ensure compliance with all relevant Apple guidelines and iOS
+      standards.
+    </p>
+
+    <p>
+      Questions? Contact us at
+      <a href="mailto:hello@nayaca.com">hello@nayaca.com</a>
+    </p>
+
+    <h4 class="mt-4">Responsible for all legal matters</h5>
+
+    <p>
+      Daniel Mittag, LL.M.<br>
+      Schlörstr. 23<br>
+      80634 Munich<br>
+      Germany
+    </p>
+  </main>
+
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Common JS -->
   <script src="common.js"></script>
 </body>
 </html>
