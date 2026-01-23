@@ -7,4 +7,6 @@ body {
   text-decoration: none;
 }
 
-  /* #ffbcd9 */
+.contact-cta a:hover {
+  color: #ffbcd9;
+}
