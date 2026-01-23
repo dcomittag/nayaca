@@ -21,103 +21,127 @@
   <!-- Common & page-specific CSS -->
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="works.css">
-
 </head>
+
 <body>
 
   <!-- Navbar -->
-<nav class="nav">
-  <a href="/" class="nav-logo">
-    <img src="assets/NAYACA_raw_transparent.png" alt="Nayaca">
-  </a>
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <img src="assets/NAYACA_raw_transparent.png" alt="Nayaca">
+    </a>
 
-  <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
 
-  <ul class="nav-links">
-    <li><a href="works.html" class="active">WORKS</a></li>
-    <li><a href="services.html">SERVICES</a></li>
-    <li><a href="legal.html">LEGAL</a></li>
-  </ul>
-</nav>
+    <ul class="nav-links">
+      <li><a href="works.html" class="active">WORKS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="legal.html">LEGAL</a></li>
+    </ul>
+  </nav>
 
-  <!-- Main container -->
-  <div class="container mt-5">
+  <!-- Main content -->
+  <main class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-9 col-xl-8">
 
-    <!-- App logos row -->
-    <div class="app-row">
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank">
-          <img src="assets/YesLogo-256.png" srcset="assets/YesLogo-512.png 2x" alt="¥€$ Expense Tracker" class="app-logo">
-        </a>
-      </div>
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/flagspot/idXXXX" target="_blank">
-          <img src="assets/FlagSpotLogo-256.png" srcset="assets/FlagSpotLogo-512.png 2x" alt="FlagSpot" class="app-logo">
-        </a>
-      </div>
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/caminoquest/idXXXX" target="_blank">
-          <img src="assets/CaminoQuestLogo-256.png" srcset="assets/CaminoQuestLogo-512.png 2x" alt="CaminoQuest" class="app-logo">
-        </a>
-      </div>
-      <div class="app-col">
-        <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank">
-          <img src="assets/WallnoteLogo-256.png" srcset="assets/WallnoteLogo-512.png 2x" alt="Wallnote" class="app-logo">
-        </a>
+        <!-- App logos -->
+        <section class="app-row mb-4">
+          <div class="app-col">
+            <a href="https://apps.apple.com/th/app/yes-expense-tracker/id6448117774" target="_blank">
+              <img src="assets/YesLogo-256.png"
+                   srcset="assets/YesLogo-512.png 2x"
+                   alt="¥€$ Expense Tracker"
+                   class="app-logo">
+            </a>
+          </div>
+
+          <div class="app-col">
+            <a href="https://apps.apple.com/th/app/flagspot/idXXXX" target="_blank">
+              <img src="assets/FlagSpotLogo-256.png"
+                   srcset="assets/FlagSpotLogo-512.png 2x"
+                   alt="FlagSpot"
+                   class="app-logo">
+            </a>
+          </div>
+
+          <div class="app-col">
+            <a href="https://apps.apple.com/th/app/caminoquest/idXXXX" target="_blank">
+              <img src="assets/CaminoQuestLogo-256.png"
+                   srcset="assets/CaminoQuestLogo-512.png 2x"
+                   alt="CaminoQuest"
+                   class="app-logo">
+            </a>
+          </div>
+
+          <div class="app-col">
+            <a href="https://apps.apple.com/th/app/wallnote/id6480289629" target="_blank">
+              <img src="assets/WallnoteLogo-256.png"
+                   srcset="assets/WallnoteLogo-512.png 2x"
+                   alt="Wallnote"
+                   class="app-logo">
+            </a>
+          </div>
+        </section>
+
+        <!-- App descriptions -->
+        <section class="works-list">
+
+          <article class="mb-4">
+            <p class="app-title" style="background-color:#85BB65;">¥€$ Expense Tracker</p>
+            <p>
+              Discover ¥€$, the expense tracker that is as unique as you are.
+              Create up to five categories with custom names, budgets, colors,
+              and emojis. Track expenses effortlessly and start saving.
+            </p>
+          </article>
+
+          <article class="mb-4">
+            <p class="app-title" style="background-color:#0A84FF;">FlagSpot</p>
+            <p>
+              Test and sharpen your flag knowledge with a clean,
+              distraction-free experience designed for quick play.
+            </p>
+          </article>
+
+          <article class="mb-4">
+            <p class="app-title" style="background-color:#FFC72C;">CaminoQuest</p>
+            <p>
+              Walk the Camino de Santiago wherever you are.
+              Coming to the App Store in summer 2025.
+            </p>
+          </article>
+
+          <article class="mb-4">
+            <p class="app-title" style="background-color:#5856D6;">Wallnote</p>
+            <p>
+              Turn your wallpaper into a reminder board.
+              Notes are always visible with one simple screenshot.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <p>
+              Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.
+              Nullam varius, turpis et commodo pharetra.
+            </p>
+          </article>
+
+        </section>
+
       </div>
     </div>
-
-    <!-- App descriptions -->
-    <div class="row mt-4">
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#85BB65;">¥€$ Expense Tracker</p>
-        <p>Discover ¥€$, the expense tracker that is as unique as you are. Create up to five categories with custom names, budgets, colors, and emojis. Track expenses effortlessly and start saving.</p>
-      </div>
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#0A84FF;">FlagSpot</p>
-        <p>Test and sharpen your flag knowledge with a clean, distraction-free experience designed for quick play.</p>
-      </div>
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#FFC72C;">CaminoQuest</p>
-        <p>Walk the Camino de Santiago wherever you are. Coming to the App Store in summer 2025.</p>
-      </div>
-      <div class="col-12 mb-4">
-        <p class="app-title" style="background-color:#5856D6;">Wallnote</p>
-        <p>Turn your wallpaper into a reminder board. Notes are always visible with one simple screenshot.</p>
-        <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-
-<p>
-Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, 
-nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. 
-Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-
-<p>
-Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, 
-nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. 
-Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.
-</p>
-
-      </div>
-    </div>
-
-  </div>
+  </main>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <!-- Common JS -->
   <script src="common.js"></script>
 
 </body>
 </html>
+
