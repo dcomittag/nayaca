@@ -3,11 +3,8 @@ body {
 }
 
 .contact-cta a {
-  color: #ffbcd9;
-  font-weight: 600;
+  font-weight: bold;
   text-decoration: none;
 }
 
-.contact-cta a:hover {
-  opacity: 0.85;
-}
+  /* #ffbcd9 */
