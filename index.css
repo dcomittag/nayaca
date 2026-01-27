@@ -21,7 +21,7 @@ body {
 /* Container for the welcome text */
 #sloganContainer {
   position: absolute;
-  bottom: 10rem;    /* distance from bottom */
+  bottom: 6rem;    /* distance from bottom */
   right: 2rem;     /* distance from right */
   text-align: right;
   color: white;    /* or any color that stands out on your background */
@@ -33,7 +33,7 @@ body {
           background-position-x: 40%;
         }
   #myContainer {
-    bottom: 5rem;
+    bottom: 3rem;
     right: 1rem;
     font-size: 0.9rem;
   }
